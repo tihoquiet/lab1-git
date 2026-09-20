@@ -13,6 +13,11 @@ double fallSpeed(double t) {
     return g * t;
 }
 
+// Высота падения
+double fallHeight(double t) {
+    return g * t * t / 2;
+}
+
 // ===== Главная функция: меню =====
 int main() {
     int choice;
@@ -36,6 +41,9 @@ int main() {
             break;
 
         case 2:
+            cout << "Введите время t: ";
+            cin >> t;
+            cout << "Высота h = " << fallHeight(t) << "\n";
             break;
 
         case 3:
